@@ -34,9 +34,9 @@ $ CUDA_VISIBLE_DEVICES=0 python preprocess.py --input_dir dataset/WQ --output_di
 ```
 2.To train the example, execute:
 ```
-$ CUDA_VISIBLE_DEVICES=0,1 python train_main_finetune.py --num_train_epochs 30 --input_dir dataset/WQ --output_dir './output_WQ' --learning_rate 5e-5 --batch_size 8 --model_name_or_path 'facebook/bart-base'
+$ CUDA_VISIBLE_DEVICES=0 python train_main_finetune.py --num_train_epochs 30 --input_dir dataset/WQ --output_dir './output_WQ' --learning_rate 5e-5 --batch_size 8 --model_name_or_path 'facebook/bart-base'
 ```
 3.To infer the example, execute:
 ```
-$ CUDA_VISIBLE_DEVICES=0,1 python infer.py --input_dir dataset/WQ --output_dir './output_WQ' --batch_size 8 --model_name_or_path 'facebook/bart-base'
+$ CUDA_VISIBLE_DEVICES=0 python infer.py --input_dir dataset/WQ --output_dir './output_WQ' --batch_size 8 --model_name_or_path 'facebook/bart-base'
 ```
