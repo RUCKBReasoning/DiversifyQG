@@ -49,7 +49,7 @@ def train_infer_forward(args, iteration):
     logging.info("Create train_loader.........")
     model.load_state_dict(torch.load(os.path.join(args.output_dir, 'param_forward_WQ_' + str(iteration) +'.pt')) )    
    
-    model = torch.nn.DataParallel(model, device_ids = [0, 1])
+    model = torch.nn.DataParallel(model, device_ids = [0])
     model = model.to(device)
     test_nums_forward(model, tokenizer, args, args.return_nums, iteration) 
     
